@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+ <title>Saludo Personalizado</title>
+</head>
+<body>
+ <h1>Saludo Personalizado</h1>
+ <input type="text" id="name" placeholder="Ingresa tu nombre">
+ <button onclick="getGreeting()">Saludar</button>
+ <div id="greeting"></div>
+ <script>
+    function getGreeting() {
+        var name = document.getElementById("name").value;
+        var greetingElement = document.getElementById("greeting");
+
+        if (name !== "") {
+            var greeting = "Hola, " + name + " ¡Bienvenido!";
+            greetingElement.textContent = greeting;
+        } else {
+            greetingElement.textContent = "Por favor, ingresa tu nombre.";
+        }
+    }
+ </script>
+</body>
+</html>
